@@ -17,4 +17,16 @@ public class BookServiceImpl implements BookService{
         return bookRepository.save(book);
     }
 
+    public Book findByName(String nameBook){
+        return bookRepository.findByName(nameBook);
+    }
+
+    public Book findByAuthor(String authorBook) {
+        return bookRepository.findByAuthor(authorBook);
+    }
+
+    public Boolean existsBookByISBN(String isbn){
+        return bookRepository.existsById(Long.valueOf(isbn));
+    }
+
 }
